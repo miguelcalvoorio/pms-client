@@ -15,12 +15,15 @@ import { WelcomeComponent }    from './welcome/index';
 import { LoginComponent }      from './login/index';
 import { JoinUsComponent }     from './joinus/index';
 import { HomeComponent }       from './home/index';
+import { ClientComponent }     from './client/index';
 
 import { CustomHttpProvider }  from './_helpers/index';
 import { AuthHelp }            from './_helpers/index';
+import { JwtHelp }             from './_helpers/index';
 import { MessageService }      from './_services/index';
 import { UserService }         from './_services/index';
 import { LoginService }        from './_services/index';
+import { ClientService }       from './_services/index';
 
 @NgModule({
     imports: [
@@ -37,14 +40,17 @@ import { LoginService }        from './_services/index';
         WelcomeComponent,
         LoginComponent,
         JoinUsComponent,
-        HomeComponent
+        HomeComponent,
+        ClientComponent
     ],
     providers: [
         CustomHttpProvider,
         AuthHelp,
+        JwtHelp,
         MessageService,
         UserService,
-        LoginService
+        LoginService,
+        ClientService,
     ],
     bootstrap: [AppComponent]
 })

@@ -14,7 +14,7 @@ import { User }         from '../_models/index';
 
 export class HeaderComponent implements OnInit {
     private userSubscription: Subscription;
-    currentUser: any;
+    currentUser: User;
     
     constructor(
         private route: ActivatedRoute,

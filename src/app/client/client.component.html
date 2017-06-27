@@ -1,0 +1,16 @@
+<div>
+    <form [formGroup]="clientForm" class="form-horizontal" (ngSubmit)="onClientSubmit()">
+        <fieldset>
+            <input type="text" class="form-control input-sm" formControlName="clientName" [(ngModel)]="model.clientName" placeholder="Client name" required>
+            <input type="text" class="form-control input-sm" formControlName="clientServiceGroup" [(ngModel)]="model.clientServiceGroup" placeholder="Client service group" required>
+            <input type="text" class="form-control input-sm" formControlName="clientIndustry" [(ngModel)]="model.clientIndustry" placeholder="Client industry" required>
+            <input type="text" class="form-control input-sm" formControlName="clientCountry" [(ngModel)]="model.clientCountry" placeholder="Client country" required>
+            <div class="form-group">
+              <div class="col-md-12">
+                <a *ngIf="!loading" class="btn btn-primary btn-block" (click)="clientSubmit()">Nuevo Client</a>
+                <a *ngIf="loading" class="btn btn-primary btn-block"><img *ngIf="loading" src="{{loadingSrc}}"/></a>
+              </div>
+            </div>            
+        </fieldset>
+    </form>
+</div>

@@ -9,6 +9,7 @@ export class UserService {
     constructor(private http: Http) {}
     
     create (user: User) {
+        console.log(this.jwt());
         return this.http.post('/users/register', user, this.jwt()).map((response: Response) => {});
     }
     
