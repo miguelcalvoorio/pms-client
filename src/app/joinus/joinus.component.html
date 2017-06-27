@@ -49,7 +49,8 @@
             </fieldset>
             <div class="form-group">
               <div class="col-md-12">
-                <a class="btn btn-primary btn-block" (click)="joinUsSubmit()">Register</a>
+                <a *ngIf="!loading" class="btn btn-primary btn-block" (click)="joinUsSubmit()">Register</a>
+                <a *ngIf="loading" class="btn btn-primary btn-block"><img *ngIf="loading" src="{{loadingSrc}}"/></a>
               </div>
             </div>
           </fieldset>

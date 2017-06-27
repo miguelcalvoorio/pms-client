@@ -9,8 +9,7 @@ export class UserService {
     constructor(private http: Http) {}
     
     create (user: User) {
-        //return this.http.post('/users/register', user, this.jwt()).map((response: Response) => response.json());
-        return this.http.post('/users/register', user).map((response: Response) => response.json());
+        return this.http.post('/users/register', user, this.jwt()).map((response: Response) => {});
     }
     
     // private helper methods

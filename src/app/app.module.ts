@@ -8,13 +8,19 @@ import { HttpModule }          from '@angular/http';
 import { AppComponent }        from './app.component';
 import { Routing }             from './app.routing';
 
+import { MessageComponent}     from './_directives/index';
+
 import { HeaderComponent }     from './header/index';
 import { WelcomeComponent }    from './welcome/index';
-import { SignInComponent }     from './signin/index';
+import { LoginComponent }      from './login/index';
 import { JoinUsComponent }     from './joinus/index';
+import { HomeComponent }       from './home/index';
 
 import { CustomHttpProvider }  from './_helpers/index';
+import { AuthHelp }            from './_helpers/index';
+import { MessageService }      from './_services/index';
 import { UserService }         from './_services/index';
+import { LoginService }        from './_services/index';
 
 @NgModule({
     imports: [
@@ -26,14 +32,19 @@ import { UserService }         from './_services/index';
     ],
     declarations: [
         AppComponent,
+        MessageComponent,
         HeaderComponent,
         WelcomeComponent,
-        SignInComponent,
+        LoginComponent,
         JoinUsComponent,
+        HomeComponent
     ],
     providers: [
         CustomHttpProvider,
-        UserService
+        AuthHelp,
+        MessageService,
+        UserService,
+        LoginService
     ],
     bootstrap: [AppComponent]
 })
