@@ -5,10 +5,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     moduleId: module.id.toString(),
-    templateUrl: 'login.component.html'
+    templateUrl: 'signin.component.html'
 })
 
-export class LoginComponent implements OnInit {
+export class SignInComponent implements OnInit {
     model: any = {};
     loading = false;
     returnUrl: string;

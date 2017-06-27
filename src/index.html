@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="/" />
-    <title>Project Management Suite</title>
+    <title>FlexManager - Project Management Suite</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
+    
     <!-- bootstrap css -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="/src/css/font-awesome.min.css">
+    <style>
+        .Absolute-Center {
+          margin: auto;
+          position: absolute;
+          top: 0; left: 0; bottom: 0; right: 0;
+        }
+        
+        .Absolute-Center.is-Responsive {
+          width: 50%; 
+          height: 50%;
+          min-width: 200px;
+          max-width: 400px;
+          padding: 40px;
+        }
+    </style>
 </head>
 <body>
-    <app>Loading...</app>
+    <app>
+        <!-- BEGIN LOADING MESSAGE -->
+        <div class="Absolute-Center is-Responsive">
+          <div class="well text-center">
+            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+            <p>Loading...</p>
+          </div>
+        </div>
+        <!-- END LOADING MESSAGE -->
+    </app>
 </body>
 </html>
