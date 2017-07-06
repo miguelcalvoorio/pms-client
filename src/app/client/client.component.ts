@@ -22,11 +22,11 @@ declare var jQuery:any;
 })
 
 export class ClientComponent implements OnInit {
-    clientForm: FormGroup;
-    clients: Client[] = [];
+    clientForm   : FormGroup;
+    clients      : Client[] = [];
     serviceGroups: ServiceGroup[];
-    industries: Industry[];
-    countries: Country[];
+    industries   : Industry[];
+    countries    : Country[];
     
     editClient    : any = {};
     selectedClient: any = {};
@@ -39,9 +39,9 @@ export class ClientComponent implements OnInit {
     loadingSrc = appConfig.loadingSrc;
     
     constructor(
-        private _builder: FormBuilder,
+        private _builder       : FormBuilder,
         private _messageService: MessageService,
-        private _clientService: ClientService) {
+        private _clientService : ClientService) {
     }
     
     ngOnInit() {
@@ -51,9 +51,6 @@ export class ClientComponent implements OnInit {
             clientServiceGroup: ['', Validators.compose([Validators.required, Validators.minLength(5)])],
             clientCountry     : ['', Validators.compose([Validators.required, Validators.minLength(5)])]
         });
-        
-        this.editClient.clientServiceGroup = "FS";
-        this.editClient.clientCountry = "ES";
         
         this.serviceGroups = ClientAttributeData.getServiceGroups();
         this.industries    = ClientAttributeData.getIndustries()
